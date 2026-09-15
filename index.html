@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Berry Shop</title>
+<style>
+  :root{
+    --pink-deep:#e85d9c;
+    --pink-soft:#ffd4e8;
+    --pink-pale:#fff3f9;
+    --ink:#3a2a33;
+    --border:#3a2a33;
+    --shadow:#c94a86;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      repeating-conic-gradient(var(--pink-soft) 0% 25%, var(--pink-pale) 0% 50%) 0 0/28px 28px;
+    font-family: "Galmuri11", "Press Start 2P", monospace, sans-serif;
+    color:var(--ink);
+    padding:20px;
+  }
+
+  .wrap{max-width:820px; margin:0 auto;}
+
+  h1{
+    text-align:center;
+    font-size:16px;
+    background:var(--pink-deep);
+    color:#fff;
+    border:3px solid var(--border);
+    box-shadow:6px 6px 0 var(--shadow);
+    padding:12px;
+    margin:0 0 14px;
+  }
+
+  .controls{
+    display:flex;
+    gap:8px;
+    margin-bottom:14px;
+    flex-wrap:wrap;
+  }
+  .controls input, .controls select{
+    font-family:inherit;
+    font-size:12px;
+    padding:9px 10px;
+    border:2px solid var(--border);
+    background:#fff;
+    color:var(--ink);
+  }
+  .controls input{flex:2; min-width:160px;}
+  .controls select{flex:1; min-width:120px;}
+
+  .count{
+    font-size:11px;
+    color:#b3577f;
+    margin-bottom:10px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(130px, 1fr));
+    gap:12px;
+  }
+  .thumb-card{
+    background:#fff;
+    border:3px solid var(--border);
+    box-shadow:4px 4px 0 var(--shadow);
+    cursor:pointer;
+  }
+  .thumb-card:active{transform:translate(3px,3px); box-shadow:none;}
+  .thumb-img{
+    aspect-ratio:1/1;
+    background:var(--pink-pale);
+    border-bottom:3px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .thumb-img img{width:100%;height:100%;object-fit:cover;}
+  .thumb-img span{font-size:10px;color:#b98aa4; text-align:center; padding:0 6px;}
+  .thumb-info{padding:8px; font-size:10.5px; line-height:1.5;}
+  .thumb-info .cat{color:#b3577f;}
+  .thumb-info .status{
+    display:inline-block;
+    margin-top:3px;
+    font-size:9px;
+    background:var(--pink-pale);
+    border:1.5px solid var(--border);
+    padding:1px 5px;
+  }
+  .thumb-info .status.done{background:#e5e5e5; color:#888;}
+
+  .empty{
+    text-align:center;
+    font-size:12px;
+    color:#b98aa4;
+    padding:40px 0;
+  }
+
+  /* ---- 상세보기 오버레이 ---- */
+  .overlay{
+    display:none;
+    position:fixed; inset:0;
+    background:rgba(58,42,51,.55);
+    align-items:center; justify-content:center;
+    padding:20px;
+    z-index:10;
+  }
+  .overlay.open{display:flex;}
+  .card{
+    width:100%; max-width:380px;
+    background:#fff;
+    border:3px solid var(--border);
+    box-shadow:6px 6px 0 var(--shadow);
+  }
+  .card-header{
+    background:var(--pink-deep);
+    border-bottom:3px solid var(--border);
+    padding:10px 14px;
+    font-size:13px;
+    color:#fff;
+  }
+  .carousel{
+    position:relative;
+    aspect-ratio:1/1;
+    background:var(--pink-pale);
+    border-bottom:3px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .carousel img{width:100%;height:100%;object-fit:cover;display:none;}
+  .carousel img.active{display:block;}
+  .no-photo{font-size:12px;color:#b98aa4;}
+  .arrow{
+    position:absolute; top:50%; transform:translateY(-50%);
+    background:#fff; border:2px solid var(--border);
+    width:32px; height:32px;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; font-size:14px;
+    box-shadow:2px 2px 0 var(--shadow);
+  }
+  .arrow.prev{left:10px;} .arrow.next{right:10px;}
+  .dots{position:absolute; bottom:8px; left:50%; transform:translateX(-50%); display:flex; gap:5px;}
+  .dot{width:6px;height:6px;background:#fff;border:1.5px solid var(--border);}
+  .dot.active{background:var(--pink-deep);}
+  .info{
+    padding:14px 16px;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:9px 10px;
+    font-size:12px;
+    line-height:1.5;
+  }
+  .info dt{color:#b3577f; white-space:nowrap;}
+  .info dd{margin:0; font-weight:bold;}
+  .actions{display:flex; gap:8px; padding:0 16px 16px;}
+  .actions a, .actions button{
+    flex:1; text-align:center; font-family:inherit; font-size:12px;
+    padding:10px 8px; border:2px solid var(--border); cursor:pointer; text-decoration:none;
+  }
+  .btn-kakao{background:#FEE500; color:var(--ink); box-shadow:3px 3px 0 var(--shadow);}
+  .btn-kakao:active{transform:translate(3px,3px); box-shadow:none;}
+  .btn-close{background:#fff; color:var(--ink); box-shadow:3px 3px 0 #ccc;}
+  .btn-close:active{transform:translate(3px,3px); box-shadow:none;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <h1>Berry Shop</h1>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="아이템 이름 검색...">
+    <select id="categorySelect">
+      <option value="">전체 카테고리</option>
+    </select>
+    <select id="statusSelect">
+      <option value="">전체 상태</option>
+      <option value="판매중">판매중</option>
+      <option value="세트판매">세트판매</option>
+      <option value="판매완료">판매완료</option>
+      <option value="판매 미정">판매 미정</option>
+    </select>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="emptyMsg" style="display:none;">조건에 맞는 아이템이 없어요</div>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="card">
+    <div class="card-header">플레이빌</div>
+    <div class="carousel" id="carousel">
+      <div class="no-photo" id="noPhoto">사진 없음</div>
+      <button class="arrow prev" id="prevBtn">◀</button>
+      <button class="arrow next" id="nextBtn">▶</button>
+      <div class="dots" id="dots"></div>
+    </div>
+    <dl class="info">
+      <dt>이름</dt><dd id="fName">-</dd>
+      <dt>카테고리</dt><dd id="fCategory">-</dd>
+      <dt>상태</dt><dd id="fStatus">-</dd>
+      <dt>가격</dt><dd id="fPrice">카카오톡 문의</dd>
+    </dl>
+    <div class="actions">
+      <a class="btn-kakao" id="kakaoBtn" href="https://open.kakao.com/o/s3Wg0Nch" target="_blank" rel="noopener">카카오톡 문의</a>
+      <button class="btn-close" id="closeBtn">닫기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const KAKAO_URL = "https://open.kakao.com/o/sqk5d46g";
+
+  const DATA_URL = "items.json?v=" + Date.now(); // 캐시 방지용
+  let items = [];
+  let filtered = [];
+
+  const grid = document.getElementById('grid');
+  const emptyMsg = document.getElementById('emptyMsg');
+  const countEl = document.getElementById('count');
+  const searchInput = document.getElementById('searchInput');
+  const categorySelect = document.getElementById('categorySelect');
+  const statusSelect = document.getElementById('statusSelect');
+
+  fetch(DATA_URL)
+    .then(r => r.json())
+    .then(data => {
+      items = data;
+      const cats = [...new Set(items.map(i => i.category))].sort();
+      cats.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c; opt.textContent = c;
+        categorySelect.appendChild(opt);
+      });
+      applyFilters();
+    })
+    .catch(() => {
+      grid.innerHTML = '';
+      emptyMsg.textContent = 'items.json을 불러오지 못했어요. 같은 폴더에 items.json이 있는지 확인해주세요.';
+      emptyMsg.style.display = 'block';
+    });
+
+  function applyFilters() {
+    const q = searchInput.value.trim().toLowerCase();
+    const cat = categorySelect.value;
+    const status = statusSelect.value;
+    filtered = items.filter(i => {
+      if (q && !i.name.toLowerCase().includes(q)) return false;
+      if (cat && i.category !== cat) return false;
+      if (status && i.status !== status) return false;
+      return true;
+    });
+    render();
+  }
+
+  function render() {
+    countEl.textContent = `${filtered.length}개 아이템`;
+    grid.innerHTML = '';
+    emptyMsg.style.display = filtered.length ? 'none' : 'block';
+    filtered.forEach((item) => {
+      const card = document.createElement('div');
+      card.className = 'thumb-card';
+      const done = item.status === '판매완료';
+      card.innerHTML = `
+        <div class="thumb-img">
+          ${item.images[0] ? `<img src="${item.images[0]}" loading="lazy">` : `<span>사진 없음</span>`}
+        </div>
+        <div class="thumb-info">
+          <div>${item.name}</div>
+          <div class="cat">${item.category}</div>
+          <div class="cat">${item.price ? item.price : '가격문의'}</div>
+          <span class="status${done ? ' done' : ''}">${item.status}</span>
+        </div>`;
+      card.addEventListener('click', () => openItem(item));
+      grid.appendChild(card);
+    });
+  }
+
+  searchInput.addEventListener('input', applyFilters);
+  categorySelect.addEventListener('change', applyFilters);
+  statusSelect.addEventListener('change', applyFilters);
+
+  // ---- 상세보기 ----
+  const overlay = document.getElementById('overlay');
+  const carousel = document.getElementById('carousel');
+  const noPhoto = document.getElementById('noPhoto');
+  const dotsWrap = document.getElementById('dots');
+  let current = 0;
+
+  function openItem(item) {
+    document.getElementById('fName').textContent = item.name;
+    document.getElementById('fCategory').textContent = item.category || '-';
+    document.getElementById('fStatus').textContent = item.status || '-';
+    document.getElementById('fPrice').textContent = item.price ? item.price : '카카오톡 문의';
+    document.getElementById('kakaoBtn').href = KAKAO_URL;
+
+    carousel.querySelectorAll('img').forEach(el => el.remove());
+    dotsWrap.innerHTML = '';
+    current = 0;
+
+    if (item.images.length > 0) {
+      noPhoto.style.display = 'none';
+      item.images.forEach((src, i) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.className = i === 0 ? 'active' : '';
+        carousel.insertBefore(img, document.getElementById('prevBtn'));
+        const dot = document.createElement('div');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dotsWrap.appendChild(dot);
+      });
+    } else {
+      noPhoto.style.display = 'block';
+    }
+    overlay.classList.add('open');
+  }
+
+  function show(index) {
+    const imgs = carousel.querySelectorAll('img');
+    const dots = dotsWrap.querySelectorAll('.dot');
+    if (imgs.length === 0) return;
+    imgs[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + imgs.length) % imgs.length;
+    imgs[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => show(current - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => show(current + 1));
+  document.getElementById('closeBtn').addEventListener('click', () => overlay.classList.remove('open'));
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('open'); });
+</script>
+
+</body>
+</html>
