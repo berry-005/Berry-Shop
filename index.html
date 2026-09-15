@@ -216,7 +216,7 @@
 </div>
 
 <script>
-  const KAKAO_URL = "https://open.kakao.com/o/sqk5d46g";
+  const KAKAO_URL = "https://open.kakao.com/o/s3Wg0Nch";
 
   const DATA_URL = "items.json?v=" + Date.now(); // 캐시 방지용
   let items = [];
@@ -254,7 +254,7 @@
     filtered = items.filter(i => {
       if (q && !i.name.toLowerCase().includes(q)) return false;
       if (cat && i.category !== cat) return false;
-      if (status && i.status !== status) return false;
+      if (status && !i.statuses.includes(status)) return false;
       return true;
     });
     render();
@@ -267,7 +267,8 @@
     filtered.forEach((item) => {
       const card = document.createElement('div');
       card.className = 'thumb-card';
-      const done = item.status === '판매완료';
+      const done = item.statuses.includes('판매완료');
+      const badges = item.statuses.map(s => `<span class="status${s === '판매완료' ? ' done' : ''}">${s}</span>`).join(' ');
       card.innerHTML = `
         <div class="thumb-img">
           ${item.images[0] ? `<img src="${item.images[0]}" loading="lazy">` : `<span>사진 없음</span>`}
@@ -276,7 +277,7 @@
           <div>${item.name}</div>
           <div class="cat">${item.category}</div>
           <div class="cat">${item.price ? item.price : '가격문의'}</div>
-          <span class="status${done ? ' done' : ''}">${item.status}</span>
+          ${badges}
         </div>`;
       card.addEventListener('click', () => openItem(item));
       grid.appendChild(card);
@@ -297,7 +298,7 @@
   function openItem(item) {
     document.getElementById('fName').textContent = item.name;
     document.getElementById('fCategory').textContent = item.category || '-';
-    document.getElementById('fStatus').textContent = item.status || '-';
+    document.getElementById('fStatus').textContent = item.statuses && item.statuses.length ? item.statuses.join(', ') : '-';
     document.getElementById('fPrice').textContent = item.price ? item.price : '카카오톡 문의';
     document.getElementById('kakaoBtn').href = KAKAO_URL;
 
