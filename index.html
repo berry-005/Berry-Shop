@@ -37,6 +37,26 @@
 
   .wrap{max-width:820px; margin:0 auto;}
 
+  .notice-box{
+    background:#fff0f7;
+    border:none;
+    border-radius:6px;
+    box-shadow:0 4px 12px var(--shadow-soft);
+    padding:10px 14px;
+    margin:0 0 14px;
+    text-align:center;
+  }
+  .notice-line1{
+    font-size:12px;
+    color:var(--ink);
+    margin:0 0 4px;
+  }
+  .notice-line2{
+    font-size:10px;
+    color:var(--ink);
+    opacity:0.55;
+    margin:0;
+  }
   h1{
     text-align:center;
     font-size:16px;
@@ -190,6 +210,11 @@
 <div class="wrap">
   <h1>Berry Shop</h1>
 
+  <div class="notice-box">
+    <p class="notice-line1">전체 상태 필터를 &#39;판매중&#39;으로 변경 후 쇼핑해주세요</p>
+    <p class="notice-line2">&#39;판매 미정&#39; 상품의 경우 부계정에 있는 등의 사유로 구매 불가한 아이템입니다. 추후 업로드 시 변동될 수 있습니다.</p>
+  </div>
+
   <div class="controls">
     <input type="text" id="searchInput" placeholder="아이템 이름 검색...">
     <select id="categorySelect">
@@ -232,7 +257,7 @@
 </div>
 
 <script>
-  const KAKAO_URL = "https://open.kakao.com/o/sqk5d46g";
+  const KAKAO_URL = "https://open.kakao.com/o/s3Wg0Nch";
 
   const DATA_URL = "items.json?v=" + Date.now(); // 캐시 방지용
   let items = [];
