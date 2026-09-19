@@ -613,7 +613,7 @@
   {
     "name": "귤빛 별조각 입 장식 F",
     "category": "입",
-    "price": "",
+    "price": "8.0",
     "images": [
       "img_0028.png"
     ],
@@ -1696,7 +1696,7 @@
   {
     "name": "달콤한 장미 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "1.0",
     "images": [
       "img_0099.png"
     ],
@@ -2177,7 +2177,7 @@
   {
     "name": "라팽의 연가 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "1.0",
     "images": [
       "img_0609.png"
     ],
@@ -2199,7 +2199,7 @@
   {
     "name": "럭키 뱀 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0123.png"
     ],
@@ -2552,7 +2552,7 @@
   {
     "name": "루비 로즈 눈",
     "category": "눈",
-    "price": "",
+    "price": "1.0",
     "images": [
       "img_0147.png"
     ],
@@ -2563,7 +2563,7 @@
   {
     "name": "루비 로즈 머리카락",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "3.0",
     "images": [
       "img_0148.png"
     ],
@@ -4901,7 +4901,7 @@
   {
     "name": "솜사탕 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "2.0",
     "images": [
       "img_0713.png"
     ],
@@ -5295,7 +5295,7 @@
   {
     "name": "시커먼 발바닥 비지 F",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "1.0",
     "images": [
       "img_0281.png"
     ],
@@ -6046,7 +6046,7 @@
   {
     "name": "오뎅냥 눈",
     "category": "눈",
-    "price": "",
+    "price": "1.5",
     "images": [
       "img_0756.png"
     ],
@@ -7778,7 +7778,7 @@
       "img_0424.png"
     ],
     "statuses": [
-      "판매중"
+      "판매완료"
     ]
   },
   {
@@ -7789,7 +7789,7 @@
       "img_0425.png"
     ],
     "statuses": [
-      "판매중"
+      "판매완료"
     ]
   },
   {
@@ -9313,7 +9313,7 @@
   {
     "name": "황혼 속 해피엔딩 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "3.5",
     "images": [
       "img_0530.png"
     ],
