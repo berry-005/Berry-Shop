@@ -5,21 +5,32 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Berry Shop</title>
 <style>
+@font-face {
+  font-family: 'Cafe24 Ssurround';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Cafe24Ssurround/Cafe24Ssurround.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/Cafe24Ssurround/Cafe24Ssurround.woff') format('woff');
+}
+</style>
+<style>
   :root{
     --pink-deep:#e85d9c;
     --pink-soft:#ffd4e8;
     --pink-pale:#fff3f9;
     --ink:#3a2a33;
-    --border:#3a2a33;
-    --shadow:#c94a86;
+    --border:#e888b8;
+    --shadow: rgba(201, 74, 134, 0.28);
+    --shadow-soft: rgba(201, 74, 134, 0.18);
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
     min-height:100vh;
-    background:
-      repeating-conic-gradient(var(--pink-soft) 0% 25%, var(--pink-pale) 0% 50%) 0 0/28px 28px;
-    font-family: "Galmuri11", "Press Start 2P", monospace, sans-serif;
+    background: linear-gradient(160deg, #ffe3f0 0%, #ffd4e8 35%, #fff3f9 75%, #ffffff 100%);
+    background-attachment: fixed;
+    font-family: "Cafe24 Ssurround", "Galmuri11", sans-serif;
     color:var(--ink);
     padding:20px;
   }
@@ -29,10 +40,11 @@
   h1{
     text-align:center;
     font-size:16px;
-    background:var(--pink-deep);
+    background:linear-gradient(135deg, #ffa9cf 0%, #ff85b8 100%);
     color:#fff;
-    border:3px solid var(--border);
-    box-shadow:6px 6px 0 var(--shadow);
+    border:3px solid #ffffff;
+    border-radius:18px;
+    box-shadow:0 8px 18px var(--shadow);
     padding:12px;
     margin:0 0 14px;
   }
@@ -68,8 +80,10 @@
   .thumb-card{
     background:#fff;
     border:3px solid var(--border);
-    box-shadow:4px 4px 0 var(--shadow);
+    border-radius:6px;
+    box-shadow:0 4px 12px var(--shadow-soft);
     cursor:pointer;
+    overflow:hidden;
   }
   .thumb-card:active{transform:translate(3px,3px); box-shadow:none;}
   .thumb-img{
@@ -116,7 +130,9 @@
     width:100%; max-width:380px;
     background:#fff;
     border:3px solid var(--border);
-    box-shadow:6px 6px 0 var(--shadow);
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 10px 24px var(--shadow);
   }
   .card-header{
     background:var(--pink-deep);
@@ -142,7 +158,7 @@
     width:32px; height:32px;
     display:flex; align-items:center; justify-content:center;
     cursor:pointer; font-size:14px;
-    box-shadow:2px 2px 0 var(--shadow);
+    box-shadow:0 2px 8px var(--shadow-soft);
   }
   .arrow.prev{left:10px;} .arrow.next{right:10px;}
   .dots{position:absolute; bottom:8px; left:50%; transform:translateX(-50%); display:flex; gap:5px;}
@@ -163,10 +179,10 @@
     flex:1; text-align:center; font-family:inherit; font-size:12px;
     padding:10px 8px; border:2px solid var(--border); cursor:pointer; text-decoration:none;
   }
-  .btn-kakao{background:#FEE500; color:var(--ink); box-shadow:3px 3px 0 var(--shadow);}
-  .btn-kakao:active{transform:translate(3px,3px); box-shadow:none;}
-  .btn-close{background:#fff; color:var(--ink); box-shadow:3px 3px 0 #ccc;}
-  .btn-close:active{transform:translate(3px,3px); box-shadow:none;}
+  .btn-kakao{background:#FEE500; color:var(--ink); box-shadow:0 3px 10px rgba(254,229,0,0.4);}
+  .btn-kakao:active{transform:translateY(2px); box-shadow:none;}
+  .btn-close{background:#fff; color:var(--ink); box-shadow:0 3px 10px rgba(0,0,0,0.12);}
+  .btn-close:active{transform:translateY(2px); box-shadow:none;}
 </style>
 </head>
 <body>
@@ -216,7 +232,7 @@
 </div>
 
 <script>
-  const KAKAO_URL = "https://open.kakao.com/o/sqk5d46g";
+  const KAKAO_URL = "https://open.kakao.com/o/s3Wg0Nch";
 
   const DATA_URL = "items.json?v=" + Date.now(); // 캐시 방지용
   let items = [];
