@@ -618,7 +618,7 @@
       "img_0028.png"
     ],
     "statuses": [
-      "판매 미정"
+      "판매중"
     ]
   },
   {
@@ -1641,7 +1641,7 @@
   {
     "name": "달콤한 꿈구름 머리카락 M",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0586.png"
     ],
@@ -2291,7 +2291,7 @@
   {
     "name": "레드 벨벳 드림 모자 M",
     "category": "모자",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0131.png"
     ],
@@ -2302,7 +2302,7 @@
   {
     "name": "레드 벨벳 드림 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0132.png"
     ],
@@ -4062,7 +4062,7 @@
   {
     "name": "봄 해당화 입 장식",
     "category": "입",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0216.png"
     ],
@@ -4084,7 +4084,7 @@
   {
     "name": "봉숭아 비트 코스튬 F",
     "category": "코스튬",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0684.png"
     ],
@@ -4517,7 +4517,7 @@
   {
     "name": "상큼 마카롱 망토 M",
     "category": "망토",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0237.png"
     ],
@@ -4575,7 +4575,7 @@
   {
     "name": "새벽녘에 모자",
     "category": "모자",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0241.png"
     ],
@@ -4586,7 +4586,7 @@
   {
     "name": "새벽녘에 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0242.png"
     ],
@@ -4597,7 +4597,7 @@
   {
     "name": "새벽녘에 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "1.5",
     "images": [
       "img_0243.png"
     ],
@@ -8827,7 +8827,7 @@
   {
     "name": "하늘빛 피크닉 (UR) 모자",
     "category": "모자",
-    "price": "",
+    "price": "세트가 1.0",
     "images": [
       "img_0506.png"
     ],
@@ -8872,7 +8872,7 @@
   {
     "name": "하늘빛 피크닉 머리카락",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "세트가 1.0",
     "images": [
       "img_0510.png"
     ],
@@ -8884,7 +8884,7 @@
   {
     "name": "하트 백",
     "category": "등 장식",
-    "price": "",
+    "price": "1.4",
     "images": [
       "img_0511.png"
     ],
@@ -9335,7 +9335,7 @@
   {
     "name": "회전 목마 모자 M",
     "category": "모자",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0839.png"
     ],
