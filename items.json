@@ -470,7 +470,7 @@
   {
     "name": "계화가지 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0024.png"
     ],
@@ -585,7 +585,7 @@
       "img_0563.png"
     ],
     "statuses": [
-      "판매중"
+      "판매완료"
     ]
   },
   {
@@ -5596,7 +5596,7 @@
   {
     "name": "알록달록 탕위안 머리카락 F",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.9",
     "images": [
       "img_0734.png"
     ],
@@ -5607,7 +5607,7 @@
   {
     "name": "알록달록 탕위안 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0735.png"
     ],
@@ -5618,7 +5618,7 @@
   {
     "name": "알록달록 탕위안 코스튬 M",
     "category": "코스튬",
-    "price": "",
+    "price": "0.9",
     "images": [
       "img_0736.png"
     ],
@@ -8216,7 +8216,7 @@
   {
     "name": "페지 복숭아 입 장식 M",
     "category": "입",
-    "price": "",
+    "price": "0.6",
     "images": [
       "img_0461.png"
     ],
@@ -8917,12 +8917,12 @@
   {
     "name": "하트 에이스 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "2.0",
     "images": [
       "img_0513.png"
     ],
     "statuses": [
-      "판매 미정"
+      "판매중"
     ]
   },
   {
