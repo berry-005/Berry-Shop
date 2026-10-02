@@ -503,7 +503,7 @@
   {
     "name": "고립섬 (시안) R 날개",
     "category": "등 장식",
-    "price": "0.2",
+    "price": "0.1",
     "images": [
       "img_0557.png"
     ],
@@ -3144,7 +3144,7 @@
   {
     "name": "무지개로 점프 눈",
     "category": "눈",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0644.png"
     ],
@@ -3155,7 +3155,7 @@
   {
     "name": "무지개로 점프 모자",
     "category": "모자",
-    "price": "",
+    "price": "1.0",
     "images": [
       "img_0173.png"
     ],
@@ -6083,7 +6083,7 @@
   {
     "name": "오딘의 별 머리카락",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.8",
     "images": [
       "img_0321.png"
     ],
