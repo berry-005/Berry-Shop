@@ -173,7 +173,7 @@
   {
     "name": "가을에게 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0541.png"
     ],
@@ -184,7 +184,7 @@
   {
     "name": "가을에게 핸드헬드2",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0542.png"
     ],
@@ -1831,7 +1831,7 @@
   {
     "name": "데려갈 오리 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0596.png"
     ],
@@ -1919,7 +1919,7 @@
   {
     "name": "따뜻한 겨울 모자",
     "category": "모자",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0107.png"
     ],
@@ -2291,7 +2291,7 @@
   {
     "name": "레드 벨벳 드림 모자 M",
     "category": "모자",
-    "price": "0.1",
+    "price": "0.2",
     "images": [
       "img_0131.png"
     ],
@@ -2335,7 +2335,7 @@
   {
     "name": "레드 벨벳 드림 핸드헬드 F",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0134.png"
     ],
@@ -2346,7 +2346,7 @@
   {
     "name": "레드 벨벳 드림 핸드헬드 M",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.4",
     "images": [
       "img_0135.png"
     ],
@@ -2717,7 +2717,7 @@
   {
     "name": "맑곰 홀릭 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "0.4",
     "images": [
       "img_0627.png"
     ],
@@ -3008,7 +3008,7 @@
   {
     "name": "모에베어 동아리 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0637.png"
     ],
@@ -3243,7 +3243,7 @@
   {
     "name": "무지개팝 입",
     "category": "입",
-    "price": "",
+    "price": "4.0",
     "images": [
       "img_0181.png"
     ],
@@ -3798,7 +3798,7 @@
   {
     "name": "버섯 토끼쨩 입",
     "category": "입",
-    "price": "",
+    "price": "1.5",
     "images": [
       "img_0202.png"
     ],
@@ -5412,7 +5412,7 @@
   {
     "name": "심장 박동의 구원 핸드헬드 F",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0288.png"
     ],
@@ -5423,7 +5423,7 @@
   {
     "name": "심장 박동의 구원 핸드헬드 M",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0289.png"
     ],
@@ -5467,7 +5467,7 @@
   {
     "name": "싱잉 버섯쨩 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0292.png"
     ],
@@ -6245,7 +6245,7 @@
   {
     "name": "옥빛 피리 핸드헬드 F",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0762.png"
     ],
@@ -6256,7 +6256,7 @@
   {
     "name": "옥빛 피리 핸드헬드 M",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0332.png"
     ],
@@ -7204,7 +7204,7 @@
   {
     "name": "청춘의 날들 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0781.png"
     ],
@@ -7359,7 +7359,7 @@
   {
     "name": "캔디 하늘집 핸드헬드 F",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0406.png"
     ],
@@ -7370,7 +7370,7 @@
   {
     "name": "캔디 하늘집 핸드헬드 M",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0787.png"
     ],
@@ -7524,7 +7524,7 @@
   {
     "name": "큐티 쇼핑 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0412.png"
     ],
@@ -7920,7 +7920,7 @@
   {
     "name": "파스토랄레 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.7",
     "images": [
       "img_0436.png"
     ],
@@ -8341,7 +8341,7 @@
   {
     "name": "표범 얼음 음료 핸드헬드 F",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0471.png"
     ],
@@ -8352,7 +8352,7 @@
   {
     "name": "표범 얼음 음료 핸드헬드 M",
     "category": "핸드헬드",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0472.png"
     ],
@@ -8374,7 +8374,7 @@
   {
     "name": "푸딩 곰돌이 머리카락 F",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0474.png"
     ],
