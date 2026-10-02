@@ -4674,84 +4674,77 @@
   {
     "name": "샴냥이 꼬리 F",
     "category": "꼬리",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0250.png"
     ],
     "statuses": [
-      "세트판매",
       "판매중"
     ]
   },
   {
     "name": "샴냥이 머리카락 F",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0705.png"
     ],
     "statuses": [
-      "세트판매",
       "판매중"
     ]
   },
   {
     "name": "샴냥이 머리카락 M",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0251.png"
     ],
     "statuses": [
-      "세트판매",
       "판매중"
     ]
   },
   {
     "name": "샴냥이 비지 F",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0252.png"
     ],
     "statuses": [
-      "세트판매",
       "판매중"
     ]
   },
   {
     "name": "샴냥이 비지 M",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0253.png"
     ],
     "statuses": [
-      "세트판매",
       "판매중"
     ]
   },
   {
     "name": "샴냥이 코스튬 F",
     "category": "코스튬",
-    "price": "",
+    "price": "3.0",
     "images": [
       "img_0254.png"
     ],
     "statuses": [
-      "세트판매",
       "판매중"
     ]
   },
   {
     "name": "샴냥이 코스튬 M",
     "category": "코스튬",
-    "price": "",
+    "price": "3.0",
     "images": [
       "img_0255.png"
     ],
     "statuses": [
-      "세트판매",
       "판매중"
     ]
   },
