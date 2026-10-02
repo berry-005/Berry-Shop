@@ -481,7 +481,7 @@
   {
     "name": "고립섬 (로제우스) R 날개",
     "category": "등 장식",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0555.png"
     ],
@@ -492,7 +492,7 @@
   {
     "name": "고립섬 (로제우스) UR 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0556.png"
     ],
@@ -503,7 +503,7 @@
   {
     "name": "고립섬 (시안) R 날개",
     "category": "등 장식",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0557.png"
     ],
@@ -514,7 +514,7 @@
   {
     "name": "고립섬 (시안) R 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0025.png"
     ],
@@ -525,7 +525,7 @@
   {
     "name": "고립섬 (시안) R 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "0.4",
     "images": [
       "img_0558.png"
     ],
@@ -536,7 +536,7 @@
   {
     "name": "고립섬 (시안) SR 날개",
     "category": "등 장식",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0559.png"
     ],
@@ -2188,7 +2188,7 @@
   {
     "name": "럭키 뱀 데코",
     "category": "데코",
-    "price": "",
+    "price": "0.4",
     "images": [
       "img_0122.png"
     ],
@@ -2475,7 +2475,7 @@
   {
     "name": "루나 페어리 꼬리",
     "category": "꼬리",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0140.png"
     ],
@@ -4861,7 +4861,7 @@
   {
     "name": "솔티 버블",
     "category": "다리 장식",
-    "price": "",
+    "price": "2.5",
     "images": [
       "img_0261.png"
     ],
@@ -6960,7 +6960,7 @@
   {
     "name": "종이비행기 레그릿",
     "category": "다리 장식",
-    "price": "",
+    "price": "2.0",
     "images": [
       "img_0773.png"
     ],
