@@ -171,6 +171,7 @@
     box-shadow:0 2px 10px rgba(201,74,134,0.10);
     cursor:pointer;
     overflow:hidden;
+    position:relative;
     transition:transform .12s ease, box-shadow .12s ease;
   }
   .thumb-card:active{transform:translateY(1px); box-shadow:0 1px 4px rgba(201,74,134,0.10);}
@@ -196,6 +197,48 @@
     padding:2px 8px;
   }
   .thumb-info .status.done{background:rgba(0,0,0,0.06); color:#888;}
+
+  /* ---- 하트(찜) ---- */
+  .heart-btn{
+    position:absolute; top:8px; right:8px; z-index:2;
+    width:32px; height:32px; padding:0;
+    border:none; border-radius:50%;
+    background:rgba(255,255,255,0.88);
+    box-shadow:0 2px 8px rgba(201,74,134,0.20);
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+  }
+  .heart-btn svg, .btn-heart svg{
+    width:18px; height:18px;
+    fill:none; stroke:var(--pink-deep); stroke-width:2; stroke-linejoin:round;
+  }
+  .heart-btn.on svg, .btn-heart.on svg{fill:var(--pink-deep);}
+  .heart-btn.pop svg{animation:heart-pop .25s ease;}
+  @keyframes heart-pop{0%{transform:scale(.6);} 60%{transform:scale(1.25);} 100%{transform:scale(1);}}
+
+  .wish-toggle{
+    font-family:inherit; font-size:12px;
+    padding:9px 12px;
+    border:2px solid var(--border);
+    background:#fff; color:var(--pink-deep);
+    cursor:pointer;
+    display:flex; align-items:center; gap:6px;
+  }
+  .wish-toggle svg{width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2; stroke-linejoin:round;}
+  .wish-toggle.on{background:var(--pink-deep); color:#fff; border-color:var(--pink-deep);}
+  .wish-toggle.on svg{fill:currentColor;}
+  .controls.wish-mode input, .controls.wish-mode select{opacity:.4; pointer-events:none;}
+
+  .count-row{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px;}
+  .count-row .count{margin-bottom:0;}
+  .wish-copy{
+    font-family:inherit; font-size:11px;
+    padding:6px 12px;
+    border:none; border-radius:999px;
+    background:var(--pink-deep); color:#fff;
+    cursor:pointer;
+  }
+  .wish-copy[hidden]{display:none;}
 
   .empty{
     text-align:center;
@@ -271,6 +314,12 @@
   .btn-kakao:active{transform:translateY(2px); box-shadow:none;}
   .btn-close{background:#fff; color:var(--ink); box-shadow:0 3px 10px rgba(0,0,0,0.12);}
   .btn-close:active{transform:translateY(2px); box-shadow:none;}
+  .actions .btn-heart{
+    flex:0 0 46px; padding:0;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff; box-shadow:0 3px 10px rgba(0,0,0,0.12);
+  }
+  .actions .btn-heart:active{transform:translateY(2px); box-shadow:none;}
 </style>
 </head>
 <body>
@@ -306,9 +355,16 @@
       <option value="판매완료">판매완료</option>
       <option value="판매 미정">판매 미정</option>
     </select>
+    <button type="button" class="wish-toggle" id="wishToggle" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      찜 목록 <span id="wishCount">0</span>
+    </button>
   </div>
 
-  <div class="count" id="count"></div>
+  <div class="count-row">
+    <div class="count" id="count"></div>
+    <button type="button" class="wish-copy" id="wishCopy" hidden>찜 목록 복사</button>
+  </div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="emptyMsg" style="display:none;">조건에 맞는 아이템이 없어요</div>
 </div>
@@ -329,6 +385,9 @@
       <dt>가격</dt><dd id="fPrice">카카오톡 문의</dd>
     </dl>
     <div class="actions">
+      <button type="button" class="btn-heart" id="popupHeart" aria-label="찜하기">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </button>
       <a class="btn-kakao" id="kakaoBtn" href="https://open.kakao.com/o/s3Wg0Nch" target="_blank" rel="noopener">카카오톡 문의</a>
       <button class="btn-close" id="closeBtn">닫기</button>
     </div>
@@ -342,12 +401,25 @@
   let items = [];
   let filtered = [];
 
+  // ---- 하트(찜) 상태: 이 기기(브라우저)에 저장돼요 ----
+  const WISH_KEY = 'berryshop_wish_v1';
+  const HEART_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+  let wished = new Set();
+  try { wished = new Set(JSON.parse(localStorage.getItem(WISH_KEY) || '[]')); } catch (e) {}
+  let wishOnly = false;
+  let openedItem = null;
+
   const grid = document.getElementById('grid');
   const emptyMsg = document.getElementById('emptyMsg');
   const countEl = document.getElementById('count');
   const searchInput = document.getElementById('searchInput');
   const categorySelect = document.getElementById('categorySelect');
   const statusSelect = document.getElementById('statusSelect');
+  const controlsEl = document.querySelector('.controls');
+  const wishToggle = document.getElementById('wishToggle');
+  const wishCountEl = document.getElementById('wishCount');
+  const wishCopy = document.getElementById('wishCopy');
+  const popupHeart = document.getElementById('popupHeart');
 
   fetch(DATA_URL)
     .then(r => r.json())
@@ -368,6 +440,12 @@
     });
 
   function applyFilters() {
+    if (wishOnly) {
+      // 찜 목록 보기에서는 검색/카테고리/상태 필터와 상관없이 하트 누른 아이템을 전부 보여줘요
+      filtered = items.filter(i => wished.has(i.name));
+      render();
+      return;
+    }
     const q = searchInput.value.trim().toLowerCase();
     const cat = categorySelect.value;
     const status = statusSelect.value;
@@ -381,7 +459,8 @@
   }
 
   function render() {
-    countEl.textContent = `${filtered.length}개 아이템`;
+    countEl.textContent = wishOnly ? `찜한 아이템 ${filtered.length}개` : `${filtered.length}개 아이템`;
+    emptyMsg.textContent = wishOnly ? '아직 찜한 아이템이 없어요. 하트를 눌러 담아보세요' : '조건에 맞는 아이템이 없어요';
     grid.innerHTML = '';
     emptyMsg.style.display = filtered.length ? 'none' : 'block';
     filtered.forEach((item) => {
@@ -399,14 +478,81 @@
           <div class="cat">${item.price ? item.price : '가격문의'}</div>
           ${badges}
         </div>`;
+      const heart = document.createElement('button');
+      heart.type = 'button';
+      heart.className = 'heart-btn' + (wished.has(item.name) ? ' on' : '');
+      heart.dataset.name = item.name;
+      heart.setAttribute('aria-label', '찜하기');
+      heart.innerHTML = HEART_SVG;
+      heart.addEventListener('animationend', () => heart.classList.remove('pop'));
+      heart.addEventListener('click', (e) => {
+        e.stopPropagation(); // 하트를 눌러도 상세 팝업은 열리지 않게
+        toggleWish(item.name);
+        if (wished.has(item.name)) heart.classList.add('pop');
+      });
+      card.appendChild(heart);
       card.addEventListener('click', () => openItem(item));
       grid.appendChild(card);
     });
+    syncHearts();
   }
 
   searchInput.addEventListener('input', applyFilters);
   categorySelect.addEventListener('change', applyFilters);
   statusSelect.addEventListener('change', applyFilters);
+
+  // ---- 하트(찜) 동작 ----
+  function saveWish() {
+    try { localStorage.setItem(WISH_KEY, JSON.stringify([...wished])); } catch (e) {}
+  }
+
+  function toggleWish(name) {
+    if (wished.has(name)) wished.delete(name); else wished.add(name);
+    saveWish();
+    if (wishOnly) applyFilters(); else syncHearts(); // 찜 목록 보기에서 하트를 끄면 바로 목록에서 빠져요
+  }
+
+  function syncHearts() {
+    grid.querySelectorAll('.heart-btn').forEach(b => b.classList.toggle('on', wished.has(b.dataset.name)));
+    popupHeart.classList.toggle('on', !!openedItem && wished.has(openedItem.name));
+    // items.json에서 사라진 아이템이 세어지지 않도록 실제 아이템 기준으로 센다
+    wishCountEl.textContent = items.length ? items.filter(i => wished.has(i.name)).length : wished.size;
+  }
+
+  wishToggle.addEventListener('click', () => {
+    wishOnly = !wishOnly;
+    wishToggle.classList.toggle('on', wishOnly);
+    wishToggle.setAttribute('aria-pressed', String(wishOnly));
+    controlsEl.classList.toggle('wish-mode', wishOnly);
+    wishCopy.hidden = !wishOnly;
+    applyFilters();
+  });
+
+  popupHeart.addEventListener('click', () => {
+    if (openedItem) toggleWish(openedItem.name);
+  });
+
+  wishCopy.addEventListener('click', async () => {
+    const names = filtered.map(i => i.name);
+    if (!names.length) return;
+    const text = '[Berry Shop 찜 목록]\n' + names.map(n => '- ' + n).join('\n');
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText(text);
+      ok = true;
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { ok = document.execCommand('copy'); } catch (e2) {}
+      ta.remove();
+    }
+    wishCopy.textContent = ok ? '복사됐어요' : '복사 실패';
+    setTimeout(() => { wishCopy.textContent = '찜 목록 복사'; }, 1500);
+  });
 
   // ---- 상세보기 ----
   const overlay = document.getElementById('overlay');
@@ -421,6 +567,8 @@
     document.getElementById('fStatus').textContent = item.statuses && item.statuses.length ? item.statuses.join(', ') : '-';
     document.getElementById('fPrice').textContent = item.price ? item.price : '카카오톡 문의';
     document.getElementById('kakaoBtn').href = KAKAO_URL;
+    openedItem = item;
+    syncHearts();
 
     carousel.querySelectorAll('img').forEach(el => el.remove());
     dotsWrap.innerHTML = '';
