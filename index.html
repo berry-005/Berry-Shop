@@ -535,7 +535,7 @@
   wishCopy.addEventListener('click', async () => {
     const names = filtered.map(i => i.name);
     if (!names.length) return;
-    const text = '[Berry Shop 찜 목록]\n' + names.map(n => '- ' + n).join('\n');
+    const text = '[Berry Shop 가격 문의]\n' + names.map(n => '- ' + n).join('\n');
     let ok = false;
     try {
       await navigator.clipboard.writeText(text);
