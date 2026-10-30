@@ -129,7 +129,7 @@
   {
     "name": "가을에게 머리카락 F",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0537.png"
     ],
@@ -2291,7 +2291,7 @@
   {
     "name": "레드 벨벳 드림 모자 M",
     "category": "모자",
-    "price": "0.2",
+    "price": "0.1",
     "images": [
       "img_0131.png"
     ],
@@ -3732,7 +3732,7 @@
   {
     "name": "버블 고먐미 데코",
     "category": "데코",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0671.png"
     ],
@@ -4139,7 +4139,7 @@
   {
     "name": "불타는 캠퍼스 머리카락 F",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.15",
     "images": [
       "img_0688.png"
     ],
@@ -6597,7 +6597,7 @@
   {
     "name": "이중 시선 입 장식 M",
     "category": "입",
-    "price": "",
+    "price": "0.15",
     "images": [
       "img_0765.png"
     ],
@@ -8275,7 +8275,7 @@
   {
     "name": "포세이돈의 축복 데코 M",
     "category": "데코",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0465.png"
     ],
@@ -8286,7 +8286,7 @@
   {
     "name": "포세이돈의 축복 머리카락 M",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0466.png"
     ],
@@ -8308,7 +8308,7 @@
   {
     "name": "포세이돈의 축복 모자 M",
     "category": "모자",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0468.png"
     ],
