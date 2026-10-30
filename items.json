@@ -4575,12 +4575,12 @@
   {
     "name": "새벽녘에 모자",
     "category": "모자",
-    "price": "0.1",
+    "price": "",
     "images": [
       "img_0241.png"
     ],
     "statuses": [
-      "판매중"
+      "판매완료"
     ]
   },
   {
