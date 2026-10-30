@@ -228,6 +228,7 @@
   .wish-toggle.on{background:var(--pink-deep); color:#fff; border-color:var(--pink-deep);}
   .wish-toggle.on svg{fill:currentColor;}
   .controls.wish-mode input, .controls.wish-mode select{opacity:.4; pointer-events:none;}
+  .controls.wish-mode #sortSelect{opacity:1; pointer-events:auto;}
 
   .count-row{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px;}
   .count-row .count{margin-bottom:0;}
@@ -355,6 +356,11 @@
       <option value="판매완료">판매완료</option>
       <option value="판매 미정">판매 미정</option>
     </select>
+    <select id="sortSelect" aria-label="가격 정렬">
+      <option value="">기본 정렬</option>
+      <option value="asc">가격 낮은 순</option>
+      <option value="desc">가격 높은 순</option>
+    </select>
     <button type="button" class="wish-toggle" id="wishToggle" aria-pressed="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
       찜 목록 <span id="wishCount">0</span>
@@ -415,6 +421,7 @@
   const searchInput = document.getElementById('searchInput');
   const categorySelect = document.getElementById('categorySelect');
   const statusSelect = document.getElementById('statusSelect');
+  const sortSelect = document.getElementById('sortSelect');
   const controlsEl = document.querySelector('.controls');
   const wishToggle = document.getElementById('wishToggle');
   const wishCountEl = document.getElementById('wishCount');
@@ -439,10 +446,26 @@
       emptyMsg.style.display = 'block';
     });
 
+  // 가격 문자열("1.0", "15,000원" 등)을 숫자로. 비어있거나 숫자가 없으면 null(=가격문의)
+  function priceNum(item) {
+    const m = String(item.price || '').replace(/,/g, '').match(/\d+(\.\d+)?/);
+    return m ? parseFloat(m[0]) : null;
+  }
+
+  // 가격 있는 아이템은 위, 가격문의는 항상 맨 아래. 정렬 선택 시 가격 있는 것끼리만 정렬(동가는 원래 순서 유지)
+  function sortItems(list) {
+    const dir = sortSelect.value;
+    const priced = [], unpriced = [];
+    list.forEach(i => (priceNum(i) === null ? unpriced : priced).push(i));
+    if (dir === 'asc') priced.sort((a, b) => priceNum(a) - priceNum(b));
+    else if (dir === 'desc') priced.sort((a, b) => priceNum(b) - priceNum(a));
+    return priced.concat(unpriced);
+  }
+
   function applyFilters() {
     if (wishOnly) {
       // 찜 목록 보기에서는 검색/카테고리/상태 필터와 상관없이 하트 누른 아이템을 전부 보여줘요
-      filtered = items.filter(i => wished.has(i.name));
+      filtered = sortItems(items.filter(i => wished.has(i.name)));
       render();
       return;
     }
@@ -455,6 +478,7 @@
       if (status && !i.statuses.includes(status)) return false;
       return true;
     });
+    filtered = sortItems(filtered);
     render();
   }
 
@@ -500,6 +524,7 @@
   searchInput.addEventListener('input', applyFilters);
   categorySelect.addEventListener('change', applyFilters);
   statusSelect.addEventListener('change', applyFilters);
+  sortSelect.addEventListener('change', applyFilters);
 
   // ---- 하트(찜) 동작 ----
   function saveWish() {
