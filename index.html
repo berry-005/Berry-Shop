@@ -452,9 +452,10 @@
     return m ? parseFloat(m[0]) : null;
   }
 
-  // 가격 있는 아이템은 위, 가격문의는 항상 맨 아래. 정렬 선택 시 가격 있는 것끼리만 정렬(동가는 원래 순서 유지)
+  // 기본 정렬은 원래 순서. 가격 낮은/높은 순을 고르면 가격 있는 아이템이 위(정렬), 가격문의는 맨 아래
   function sortItems(list) {
     const dir = sortSelect.value;
+    if (!dir) return list; // 기본 정렬: 원래 순서 그대로(가격문의와 섞여 있음)
     const priced = [], unpriced = [];
     list.forEach(i => (priceNum(i) === null ? unpriced : priced).push(i));
     if (dir === 'asc') priced.sort((a, b) => priceNum(a) - priceNum(b));
