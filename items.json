@@ -1531,7 +1531,7 @@
   {
     "name": "다이아 틱(핑크) 모자",
     "category": "모자",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0089.png"
     ],
@@ -1685,7 +1685,7 @@
   {
     "name": "달콤한 꿈구름 코스튬 M",
     "category": "코스튬",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0589.png"
     ],
@@ -2188,7 +2188,7 @@
   {
     "name": "럭키 뱀 데코",
     "category": "데코",
-    "price": "0.4",
+    "price": "",
     "images": [
       "img_0122.png"
     ],
@@ -2199,7 +2199,7 @@
   {
     "name": "럭키 뱀 비지",
     "category": "비지 (배경)",
-    "price": "0.1",
+    "price": "",
     "images": [
       "img_0123.png"
     ],
@@ -2357,7 +2357,7 @@
   {
     "name": "레드 오스 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0136.png"
     ],
@@ -2799,7 +2799,7 @@
   {
     "name": "매화 머리카락 M",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0153.png"
     ],
@@ -2810,7 +2810,7 @@
   {
     "name": "먀옹 담요 코스튬 F",
     "category": "코스튬",
-    "price": "",
+    "price": "0.7",
     "images": [
       "img_0154.png"
     ],
@@ -2821,7 +2821,7 @@
   {
     "name": "먀옹 담요 코스튬 M",
     "category": "코스튬",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0155.png"
     ],
@@ -4674,7 +4674,7 @@
   {
     "name": "샴냥이 꼬리 F",
     "category": "꼬리",
-    "price": "0.5",
+    "price": "0.35",
     "images": [
       "img_0250.png"
     ],
@@ -7359,7 +7359,7 @@
   {
     "name": "캔디 하늘집 핸드헬드 F",
     "category": "핸드헬드",
-    "price": "0.5",
+    "price": "0.3",
     "images": [
       "img_0406.png"
     ],
@@ -7370,7 +7370,7 @@
   {
     "name": "캔디 하늘집 핸드헬드 M",
     "category": "핸드헬드",
-    "price": "0.5",
+    "price": "0.3",
     "images": [
       "img_0787.png"
     ],
@@ -7832,7 +7832,7 @@
   {
     "name": "티 아로마 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0428.png"
     ],
