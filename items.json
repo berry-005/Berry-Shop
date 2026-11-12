@@ -833,7 +833,7 @@
   {
     "name": "꽃 핀 단풍 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0044.png"
     ],
@@ -993,7 +993,7 @@
   {
     "name": "꽃잎에 갇힌 자 비지 M",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0568.png"
     ],
@@ -1442,7 +1442,7 @@
   {
     "name": "눈 덮인 풍경 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0581.png"
     ],
@@ -1674,7 +1674,7 @@
   {
     "name": "달콤한 꿈구름 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0588.png"
     ],
@@ -3974,7 +3974,7 @@
   {
     "name": "복숭아 우롱 비지 M",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0680.png"
     ],
@@ -6701,7 +6701,7 @@
   {
     "name": "일출 초원 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0369.png"
     ],
@@ -8058,7 +8058,7 @@
   {
     "name": "퍼피 패트롤 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0448.png"
     ],
@@ -8616,7 +8616,7 @@
   {
     "name": "플립 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0488.png"
     ],
@@ -9053,7 +9053,7 @@
   {
     "name": "해바라기밭 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0519.png"
     ],
