@@ -2,7 +2,7 @@
   {
     "name": "11번가 눈",
     "category": "눈",
-    "price": "",
+    "price": "2.0",
     "images": [
       "img_0001.png"
     ],
@@ -38,7 +38,7 @@
   {
     "name": "11번가 모자",
     "category": "모자",
-    "price": "",
+    "price": "3.0",
     "images": [
       "img_0004.png"
     ],
@@ -62,7 +62,7 @@
   {
     "name": "11번가 입 장식",
     "category": "입",
-    "price": "",
+    "price": "0.7",
     "images": [
       "img_0006.png"
     ],
@@ -411,7 +411,7 @@
   {
     "name": "겨울 찬가 머리카락",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "세트가 2.0",
     "images": [
       "img_0551.png"
     ],
@@ -423,7 +423,7 @@
   {
     "name": "겨울 찬가 모자",
     "category": "모자",
-    "price": "",
+    "price": "세트가 2.0",
     "images": [
       "img_0552.png"
     ],
@@ -435,7 +435,7 @@
   {
     "name": "겨울 찬가 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "세트가 2.0",
     "images": [
       "img_0553.png"
     ],
@@ -447,7 +447,7 @@
   {
     "name": "겨울 찬가 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "세트가 2.0",
     "images": [
       "img_0554.png"
     ],
