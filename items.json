@@ -844,7 +844,7 @@
   {
     "name": "꽃잎 가득 바구니 데코",
     "category": "데코",
-    "price": "",
+    "price": "세트가 1.0",
     "images": [
       "img_0045.png"
     ],
@@ -856,7 +856,7 @@
   {
     "name": "꽃잎 가득 바구니 머리카락",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "세트가 1.0",
     "images": [
       "img_0046.png"
     ],
@@ -868,7 +868,7 @@
   {
     "name": "꽃잎 가득 바구니 모자",
     "category": "모자",
-    "price": "",
+    "price": "세트가 1.0",
     "images": [
       "img_0047.png"
     ],
@@ -880,7 +880,7 @@
   {
     "name": "꽃잎 가득 바구니 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "세트가 1.0",
     "images": [
       "img_0048.png"
     ],
@@ -892,7 +892,7 @@
   {
     "name": "꽃잎 가득 바구니 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "세트가 1.0",
     "images": [
       "img_0049.png"
     ],
@@ -904,7 +904,7 @@
   {
     "name": "꽃잎 가득 바구니 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "세트가 1.0",
     "images": [
       "img_0050.png"
     ],
@@ -916,12 +916,12 @@
   {
     "name": "꽃잎 흩날리며 눈",
     "category": "눈",
-    "price": "",
+    "price": "10.0",
     "images": [
       "img_0051.png"
     ],
     "statuses": [
-      "판매 미정"
+      "판매중"
     ]
   },
   {
@@ -2210,7 +2210,7 @@
   {
     "name": "럴러바이 쉽 눈",
     "category": "눈",
-    "price": "",
+    "price": "세트가 10.0",
     "images": [
       "img_0124.png"
     ],
@@ -2222,7 +2222,7 @@
   {
     "name": "럴러바이 쉽 모자",
     "category": "모자",
-    "price": "",
+    "price": "세트가 10.0",
     "images": [
       "img_0125.png"
     ],
@@ -2234,7 +2234,7 @@
   {
     "name": "럴러바이 쉽 입 장식",
     "category": "입",
-    "price": "",
+    "price": "세트가 10.0",
     "images": [
       "img_0126.png"
     ],
@@ -2246,7 +2246,7 @@
   {
     "name": "럴러바이 쉽 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "세트가 10.0",
     "images": [
       "img_0127.png"
     ],
@@ -3309,7 +3309,7 @@
   {
     "name": "물방울무늬냥 모자",
     "category": "모자",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0187.png"
     ],
@@ -3864,7 +3864,7 @@
   {
     "name": "베리 초코 물방울 머리카락 F",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0208.png"
     ],
@@ -3875,7 +3875,7 @@
   {
     "name": "베리 초코 물방울 머리카락 M",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0674.png"
     ],
@@ -3886,7 +3886,7 @@
   {
     "name": "베리 초코 물방울 모자 F",
     "category": "모자",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0209.png"
     ],
@@ -5085,7 +5085,7 @@
   {
     "name": "스타 토끼냥 코스튬 M",
     "category": "코스튬",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0721.png"
     ],
@@ -5577,7 +5577,7 @@
   {
     "name": "안녕, 꽥꽥! (오리 유치원 말풍선)",
     "category": "프레임/배경/말풍선",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0301.png"
     ],
@@ -6105,7 +6105,7 @@
   {
     "name": "오리 유치원 날개",
     "category": "등 장식",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0322.png"
     ],
@@ -6117,7 +6117,7 @@
   {
     "name": "오리 유치원 눈",
     "category": "눈",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0323.png"
     ],
@@ -6129,7 +6129,7 @@
   {
     "name": "오리 유치원 머리카락",
     "category": "머리 (헤어)",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0324.png"
     ],
@@ -6141,7 +6141,7 @@
   {
     "name": "오리 유치원 모자",
     "category": "모자",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0325.png"
     ],
@@ -6153,7 +6153,7 @@
   {
     "name": "오리 유치원 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0326.png"
     ],
@@ -6165,7 +6165,7 @@
   {
     "name": "오리 유치원 입 장식",
     "category": "입",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0327.png"
     ],
@@ -6177,7 +6177,7 @@
   {
     "name": "오리 유치원 코스튬",
     "category": "코스튬",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0328.png"
     ],
@@ -6189,7 +6189,7 @@
   {
     "name": "오리 유치원 핸드헬드",
     "category": "핸드헬드",
-    "price": "",
+    "price": "세트가 8.0",
     "images": [
       "img_0329.png"
     ],
@@ -8025,7 +8025,7 @@
   {
     "name": "팔랑거리는 나비 눈 F",
     "category": "눈",
-    "price": "",
+    "price": "8.0",
     "images": [
       "img_0445.png"
     ],
