@@ -145,7 +145,7 @@
       "img_0538.png"
     ],
     "statuses": [
-      "판매중"
+      "판매완료"
     ]
   },
   {
@@ -217,7 +217,7 @@
   {
     "name": "거리비 눈 F",
     "category": "눈",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0543.png"
     ],
@@ -228,7 +228,7 @@
   {
     "name": "거리비 모자 F",
     "category": "모자",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0544.png"
     ],
@@ -239,7 +239,7 @@
   {
     "name": "거리비 모자 M",
     "category": "모자",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0545.png"
     ],
