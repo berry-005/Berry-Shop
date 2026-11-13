@@ -2,7 +2,7 @@
   {
     "name": "11번가 눈",
     "category": "눈",
-    "price": "2.0",
+    "price": "2.5",
     "images": [
       "img_0001.png"
     ],
@@ -14,7 +14,7 @@
   {
     "name": "11번가 데코",
     "category": "데코",
-    "price": "",
+    "price": "2.0",
     "images": [
       "img_0002.png"
     ],
