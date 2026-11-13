@@ -250,7 +250,7 @@
   {
     "name": "거리비 비지 F",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0546.png"
     ],
@@ -283,7 +283,7 @@
   {
     "name": "거위 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0014.png"
     ],
@@ -640,13 +640,13 @@
       "img_0029.png"
     ],
     "statuses": [
-      "판매중"
+      "판매완료"
     ]
   },
   {
     "name": "기념일 케이크 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0030.png"
     ],
@@ -668,7 +668,7 @@
   {
     "name": "깃털의 춤 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0566.png"
     ],
@@ -756,7 +756,7 @@
   {
     "name": "깜찍이 강아지 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0037.png"
     ],
@@ -960,7 +960,7 @@
   {
     "name": "꽃잎 흩날리며 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0055.png"
     ],
@@ -1073,7 +1073,7 @@
   {
     "name": "나른한 솜토끼 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0063.png"
     ],
@@ -1117,7 +1117,7 @@
   {
     "name": "날씨요정 개구리씨 비지 M",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0065.png"
     ],
@@ -1308,7 +1308,7 @@
   {
     "name": "너를 위한 동백꽃 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0577.png"
     ],
@@ -1352,7 +1352,7 @@
   {
     "name": "네온 펑크 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0578.png"
     ],
@@ -1374,7 +1374,7 @@
   {
     "name": "네코의 포옹 비지 F",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.4",
     "images": [
       "img_0081.png"
     ],
@@ -1385,7 +1385,7 @@
   {
     "name": "네코의 포옹 비지 M",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0082.png"
     ],
@@ -1498,7 +1498,7 @@
   {
     "name": "느긋한 오후 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0584.png"
     ],
@@ -1608,7 +1608,7 @@
   {
     "name": "달이 뜨는 밤 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0095.png"
     ],
@@ -2706,7 +2706,7 @@
   {
     "name": "맑곰 홀릭 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0626.png"
     ],
@@ -2865,7 +2865,7 @@
   {
     "name": "먀옹 스크랩북 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0159.png"
     ],
@@ -2909,7 +2909,7 @@
   {
     "name": "먀옹 카페 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0163.png"
     ],
@@ -3063,7 +3063,7 @@
   {
     "name": "몽글몽글 티파티 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0641.png"
     ],
@@ -3232,7 +3232,7 @@
   {
     "name": "무지개팝 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0180.png"
     ],
@@ -3534,7 +3534,7 @@
   {
     "name": "바닷바람 작은 문어 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0660.png"
     ],
@@ -3655,7 +3655,7 @@
   {
     "name": "방과 후 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0667.png"
     ],
@@ -3787,7 +3787,7 @@
   {
     "name": "버섯 토끼쨩 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0673.png"
     ],
@@ -4150,7 +4150,7 @@
   {
     "name": "불타는 캠퍼스 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0689.png"
     ],
@@ -4249,7 +4249,7 @@
   {
     "name": "블루 아일랜드 로드 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0222.png"
     ],
