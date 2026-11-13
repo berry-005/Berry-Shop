@@ -162,7 +162,7 @@
   {
     "name": "가을에게 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0540.png"
     ],
@@ -2109,7 +2109,7 @@
   {
     "name": "라떼 아트 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0117.png"
     ],
@@ -2519,7 +2519,7 @@
   {
     "name": "루나 페어리 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0144.png"
     ],
@@ -4150,7 +4150,7 @@
   {
     "name": "불타는 캠퍼스 비지",
     "category": "비지 (배경)",
-    "price": "0.3",
+    "price": "0.2",
     "images": [
       "img_0689.png"
     ],
@@ -4282,7 +4282,7 @@
   {
     "name": "비가 내려 꽃이 핀다 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0224.png"
     ],
@@ -4374,7 +4374,7 @@
   {
     "name": "빛의 선물 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.7",
     "images": [
       "img_0231.png"
     ],
@@ -4663,7 +4663,7 @@
   {
     "name": "새해 선물 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0249.png"
     ],
@@ -4751,7 +4751,7 @@
   {
     "name": "선셋 우즈 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0706.png"
     ],
@@ -4784,7 +4784,7 @@
   {
     "name": "세이렌의 부름 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0257.png"
     ],
@@ -4872,7 +4872,7 @@
   {
     "name": "솔티 코코아 비지 M",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0711.png"
     ],
@@ -4997,7 +4997,7 @@
   {
     "name": "숲 조사관 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0716.png"
     ],
@@ -5074,7 +5074,7 @@
   {
     "name": "스타 토끼냥 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.4",
     "images": [
       "img_0720.png"
     ],
@@ -5368,7 +5368,7 @@
   {
     "name": "심장 박동의 구원 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0284.png"
     ],
@@ -5445,7 +5445,7 @@
   {
     "name": "싱잉 버섯쨩 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0732.png"
     ],
@@ -5666,7 +5666,7 @@
   {
     "name": "야옹 야옹 무스 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0304.png"
     ],
@@ -5874,7 +5874,7 @@
   {
     "name": "어서오세요 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0747.png"
     ],
@@ -5951,7 +5951,7 @@
   {
     "name": "여름의 시원한 얼음 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0751.png"
     ],
@@ -6028,7 +6028,7 @@
   {
     "name": "오늘의 내일 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.5",
     "images": [
       "img_0319.png"
     ],
@@ -6278,7 +6278,7 @@
   {
     "name": "외계 냥이 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0763.png"
     ],
@@ -6476,7 +6476,7 @@
   {
     "name": "은방울꽃의 포옹 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0350.png"
     ],
@@ -6498,7 +6498,7 @@
   {
     "name": "은하 파노라마 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0352.png"
     ],
@@ -6542,7 +6542,7 @@
   {
     "name": "이슬밤의 서리꽃 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0356.png"
     ],
@@ -6586,7 +6586,7 @@
   {
     "name": "이중 시선 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0360.png"
     ],
@@ -6745,7 +6745,7 @@
   {
     "name": "자유의 화염 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0767.png"
     ],
@@ -6982,7 +6982,7 @@
   {
     "name": "지식의 항해 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0385.png"
     ],
@@ -7282,7 +7282,7 @@
   {
     "name": "치즈가 힘이다 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0402.png"
     ],
@@ -8418,7 +8418,7 @@
   {
     "name": "푸딩 곰돌이 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.1",
     "images": [
       "img_0477.png"
     ],
@@ -8473,7 +8473,7 @@
   {
     "name": "푸른 바다 곁에서 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0480.png"
     ],
@@ -8832,7 +8832,7 @@
   {
     "name": "하늘빛 피크닉 (UR) 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0507.png"
     ],
@@ -8976,7 +8976,7 @@
   {
     "name": "해바라기 화가 비지 F",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0516.png"
     ],
@@ -8987,7 +8987,7 @@
   {
     "name": "해바라기 화가 비지 M",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.3",
     "images": [
       "img_0517.png"
     ],
@@ -9441,7 +9441,7 @@
   {
     "name": "Lily of the Valley 비지",
     "category": "비지 (배경)",
-    "price": "",
+    "price": "0.2",
     "images": [
       "img_0536.png"
     ],
